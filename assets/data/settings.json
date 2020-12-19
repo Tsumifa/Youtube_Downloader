@@ -1,4 +1,6 @@
 {
     "theme": "dark",
-    "language": "fr"
+    "language": "fr",
+    "window_size": "1007x641",
+    "icon": "assets/img/icon.ico"
 }
