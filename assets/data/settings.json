@@ -1,6 +1,6 @@
 {
-    "theme": "dark",
+    "icon": "assets/img/icon.ico",
     "language": "fr",
-    "window_size": "1007x641",
-    "icon": "assets/img/icon.ico"
+    "theme": "bright",
+    "window_size": "1007x641"
 }
