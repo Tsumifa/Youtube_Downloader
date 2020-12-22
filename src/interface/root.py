@@ -14,7 +14,7 @@ except Exception as e:
 
 class Root:
 
-    def __init__(self, _settings, _languages, _themes, _menu, _title):
+    def __init__(self, _settings, _languages, _themes, _menu, _label, _entry, _labelframe):
         '''
             initialisation des objets herites de <main>
         '''
@@ -25,7 +25,9 @@ class Root:
 
         #- models
         self.menu = _menu
-        self.title = _title
+        self.label = _label
+        self.labelframe = _labelframe
+        self.entry = _entry
         '''
             creation de la page + affichage
         '''
@@ -55,7 +57,28 @@ class Root:
         '''
             Titre de la page
         '''
-        self.TITLE = self.title.create_content('title')
+        self.TITLE = self.label.create_title(self.WINDOW, 'title')
         self.TITLE.pack()
 
+        '''
+            Emplacement du conteneur url de la video + saisie url
+            
+        '''
+        self.URL_CONTAINER = self.labelframe.create_content('video')
+        self.URL_CONTAINER.pack(pady=30)
+        self.URL_PLACEHOLDER = self.label.create_placeholder(self.URL_CONTAINER, 'url')
+        self.URL_PLACEHOLDER.pack(pady=5)
+        self.URL_ENTRY = self.entry.create_content(self.URL_CONTAINER, 'url')
+        self.URL_ENTRY.pack()
+
+        '''
+            Emplacement parametrage du telechargement :
+                - Saisie nom du fichier
+                - emplacement de stockage
+                - Saisie type telechargement (mp3 ou mp4)
+        '''
+        self.SETTING_CONTAINER = self.labelframe.create_content('advanced_settings')
+        self.SETTING_CONTAINER.pack(pady=30)
+        self.NAME_ENTRY = self.entry.create_content(self.SETTING_CONTAINER, 'name')
+        self.NAME_ENTRY.pack()
     

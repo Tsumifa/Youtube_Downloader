@@ -1,6 +1,7 @@
 {
     "icon": "assets/img/icon.ico",
-    "language": "fr",
+    "language": "en-us",
     "theme": "dark",
-    "window_size": "1007x641"
+    "window_size": "1007x641",
+    "extensions": ["video", "sound"]
 }

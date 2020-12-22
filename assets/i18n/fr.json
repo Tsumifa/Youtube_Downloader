@@ -5,5 +5,9 @@
     "help": "Aide",
     "documentation" : "Documentation",
     "quit": "Quitter",
-    "about": "A propos"
+    "about": "A propos",
+    "video": "Video",
+    "url": "Entrer l'url de la video :",
+    "advanced_settings" : "Parametres avances",
+    "name": "Choisir un nom au fichier : "
 }

@@ -4,6 +4,10 @@
     "help": "Help",
     "options": "Options",
     "documentation" : "Documentation",
+    "video": "Video",
     "quit": "Exit",
-    "about": "About"
+    "about": "About",
+    "url": "Enter video's link :",
+    "advanced_settings" : "Parametres avances",
+    "name" : "Enter file's name : "
 }

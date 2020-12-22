@@ -16,6 +16,9 @@ try:
     #- models
     import interface.models.menu as _menu
     import interface.models.label as _label
+    import interface.models.labelframe as _labelframe
+    import interface.models.entry as _entry
+
     '''
         import pour back_end
     '''
@@ -40,7 +43,9 @@ class Main:
     
         #- models
         self.menu = _menu.Menu(self.language, self.theme)
-        self.title = _label.Title(self.language, self.theme)
+        self.label = _label.Create_Label(self.language, self.theme)
+        self.labelframe = _labelframe.Labelframe(self.language, self.theme)
+        self.entry = _entry.Entry(self.language, self.theme)
 
         '''
             initialisation des classes script
@@ -50,7 +55,7 @@ class Main:
         ''' 
             initialisation des classes interfaces
         '''
-        self.root = _root.Root(self.settings, self.language, self.theme, self.menu, self.title)
+        self.root = _root.Root(self.settings, self.language, self.theme, self.menu, self.label, self.entry, self.labelframe)
 
 # == START PROGRAM == #
 
