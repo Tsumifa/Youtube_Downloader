@@ -1,5 +1,9 @@
 {
     "title": "Youtube Downloader",
-    "settings": "settings",
-    "help": "help"
+    "settings": "Settings",
+    "help": "Help",
+    "options": "Options",
+    "documentation" : "Documentation",
+    "quit": "Exit",
+    "about": "About"
 }

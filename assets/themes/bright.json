@@ -1,3 +1,5 @@
 {
-    "backgroundColor" : "#fafafa"
+    "backgroundColor" : "#a4a4a4",
+    "frameBackgroundColor" : "#a4a4a4",
+    "textColor" : "black"
 }

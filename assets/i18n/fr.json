@@ -1,5 +1,9 @@
 {
     "title": "Telecharger Youtube",
-    "settings": "parametres",
-    "help": "aide"
+    "settings": "Parametres",
+    "options": "Options",
+    "help": "Aide",
+    "documentation" : "Documentation",
+    "quit": "Quitter",
+    "about": "A propos"
 }

@@ -1,3 +1,5 @@
 {
-    "backgroundColor" : "#121212"
+    "backgroundColor" : "#121212",
+    "frameBackgroundColor" : "#212020",
+    "textColor" : "aliceblue"
 }
