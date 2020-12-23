@@ -19,5 +19,6 @@
     "select_theme": "Choisir un theme :",
     "apply": "Appliquer",
     "warning": "Attention",
-    "restart": "Il faut redémarrer l'application !"
+    "restart": "Il faut redémarrer l'application !",
+    "creator": "Application developpee par @TSUMIFA"
 }

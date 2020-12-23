@@ -41,6 +41,12 @@ class Root:
         self.create_widget()
         self.WINDOW.mainloop()
 
+    def check_inputs(self):
+        pass
+
+    def dowload_video(self):
+        print("Les infos :\r-url : {}\n-nom : {}\n-format : {}".format(self.URL_ENTRY.get(), self.NAME_ENTRY.get(), self.LISTBOX.get()))
+
     def initialize_window(self):
         '''
             definition des parametres principaux de la page
@@ -96,8 +102,5 @@ class Root:
         self.NAME_ENTRY.grid(pady=10, row=1, column=1)
         # self.LlisteCombo.bind("<<ComboboxSelected>>", action) faire fonction ici
         self.SUBMIT_BUTTON = self.button.create_submit_button(self.WINDOW, 'download')
+        self.SUBMIT_BUTTON.configure(command=self.dowload_video)
         self.SUBMIT_BUTTON.pack(side='bottom', pady=45)
-
-    def dowload_video(self):
-        select = self.LISTBOX.get()
-        print("Vous avez sélectionné : '", select,"'")

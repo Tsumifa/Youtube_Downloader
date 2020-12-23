@@ -24,6 +24,7 @@ try:
 
     #- views
     import interface.views.options as _options
+    import interface.views.about as _about
 
     '''
         import pour back_end
@@ -57,9 +58,10 @@ class Main:
 
         #- views
         self.option_window = _options.Options_Window(self.settings, self.language, self.theme, self.listbox, self.label, self.button, self.alert)
-        
+        self.about_window = _about.About_Window(self.settings, self.language, self.theme, self.label)
+
         #- models - menu
-        self.menu = _menu.Menu(self.language, self.theme, self.option_window)
+        self.menu = _menu.Menu(self.language, self.theme, self.option_window, self.about_window)
 
 
         '''

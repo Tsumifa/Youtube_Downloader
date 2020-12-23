@@ -19,5 +19,6 @@
     "select_theme": "Select a theme :",
     "apply": "Apply",
     "warning": "Warning",
-    "restart": "You need to restart the application !"
+    "restart": "You need to restart the application !",
+    "creator": "Application made by @TSUMIFA"
 }
