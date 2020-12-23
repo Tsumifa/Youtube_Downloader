@@ -7,7 +7,17 @@
     "quit": "Quitter",
     "about": "A propos",
     "video": "Video",
+    "audio": "Audio",
     "url": "Entrer l'url de la video :",
     "advanced_settings" : "Parametres avances",
-    "name": "Choisir un nom au fichier : "
+    "name": "Choisir un nom au fichier : ",
+    "select_folder": "Choisir emplacement de stockage",
+    "download" : "Telecharger",
+    "fr": "Français",
+    "en-us": "Anglais",
+    "select_language": "Choisir une langue :",
+    "select_theme": "Choisir un theme :",
+    "apply": "Appliquer",
+    "warning": "Attention",
+    "restart": "Il faut redémarrer l'application !"
 }

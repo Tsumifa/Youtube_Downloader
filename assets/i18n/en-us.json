@@ -5,9 +5,19 @@
     "options": "Options",
     "documentation" : "Documentation",
     "video": "Video",
+    "audio": "Audio",
     "quit": "Exit",
     "about": "About",
     "url": "Enter video's link :",
     "advanced_settings" : "Parametres avances",
-    "name" : "Enter file's name : "
+    "name" : "Enter file's name : ",
+    "select_folder": "Select storage location",
+    "download" : "Download",
+    "fr": "Frensh",
+    "en-us": "English",
+    "select_language": "Select a language :",
+    "select_theme": "Select a theme :",
+    "apply": "Apply",
+    "warning": "Warning",
+    "restart": "You need to restart the application !"
 }

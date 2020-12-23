@@ -23,6 +23,5 @@ class Entry:
 
     def create_content(self, place, decription):
         self.value = tk.StringVar()
-        self.value.set(self.language.get_text(decription))
-        self.entry = tk.Entry(place, width=100, font=('Courier', 15))
+        self.entry = tk.Entry(place, width=50, font=('Courier', 15, 'bold'))
         return self.entry

@@ -17,7 +17,7 @@ class Settings:
             settings_file.close()
 
     def get_settings_data(self, element):
-        return str(self.settings_data[element])
+        return self.settings_data[element]
 
     def change_setting(self, element, value):
         self.settings_data[element] = value

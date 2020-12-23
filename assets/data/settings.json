@@ -1,7 +1,20 @@
 {
+    "alert_window_size": "240x144",
+    "extensions": [
+        "video",
+        "audio"
+    ],
     "icon": "assets/img/icon.ico",
     "language": "en-us",
+    "language_list": [
+        "fr",
+        "en-us"
+    ],
+    "option_window_size": "480x360",
     "theme": "dark",
-    "window_size": "1007x641",
-    "extensions": ["video", "sound"]
+    "theme_list": [
+        "dark",
+        "bright"
+    ],
+    "window_size": "1007x641"
 }

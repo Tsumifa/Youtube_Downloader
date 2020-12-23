@@ -40,9 +40,9 @@ class Placeholder:
 
     def create_content(self, place, text):
         self.placeholder = tk.Label(place, text=self.language.get_text(text),
-        background=self.theme.get_theme('backgroundColor'),
-        foreground=self.theme.get_theme("textColor"))
-        self.placeholder.config(font=("Courier", 15))
+        background=self.theme.get_theme('frameBackgroundColor'),
+        foreground=self.theme.get_theme("textColor"), justify='left')
+        self.placeholder.config(font=("Courier", 15, 'bold'))
         return self.placeholder
 
 

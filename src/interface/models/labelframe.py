@@ -25,5 +25,5 @@ class Labelframe:
 
         self.labelframe = tk.LabelFrame(text=self.language.get_text(name),
         padx=20, pady=20, background=self.theme.get_theme("frameBackgroundColor"),
-        foreground=self.theme.get_theme("textColor"), font=('Courier', 12))
+        foreground=self.theme.get_theme("textColor"), font=('Courier', 12, 'bold'))
         return self.labelframe

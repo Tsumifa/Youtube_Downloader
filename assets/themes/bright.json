@@ -2,5 +2,6 @@
     "backgroundColor" : "#a4a4a4",
     "frameBackgroundColor" : "#a4a4a4",
     "entryBackgroundColor" : "#fafafa",
-    "textColor" : "black"
+    "textColor" : "black",
+    "validate" : "#18712a"
 }
