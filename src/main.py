@@ -67,12 +67,12 @@ class Main:
         '''
             initialisation des classes script
         '''
-        #self.downloader = _download.Download()
+        self.downloader = _download.Download()
 
         ''' 
             initialisation des classes interfaces
         '''
-        self.root = _root.Root(self.settings, self.language, self.theme, self.menu, self.label, self.entry, self.labelframe, self.listbox, self.button, self.option_window)
+        self.root = _root.Root(self.settings, self.language, self.theme, self.menu, self.label, self.entry, self.labelframe, self.listbox, self.button, self.option_window, self.alert, self.downloader)
 
 # == START PROGRAM == #
 

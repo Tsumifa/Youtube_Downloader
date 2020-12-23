@@ -22,6 +22,5 @@ class Entry:
         self.theme = _theme
 
     def create_content(self, place, decription):
-        self.value = tk.StringVar()
         self.entry = tk.Entry(place, width=50, font=('Courier', 15, 'bold'))
         return self.entry

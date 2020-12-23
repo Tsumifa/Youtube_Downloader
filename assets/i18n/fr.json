@@ -20,5 +20,8 @@
     "apply": "Appliquer",
     "warning": "Attention",
     "restart": "Il faut redémarrer l'application !",
-    "creator": "Application developpee par @TSUMIFA"
+    "creator": "Application developpee par @TSUMIFA",
+    "file_stored": "Le fichier sera stocke ici :",
+    "url_unfilled": "Aucun lien vers la video n'a ete fourni !",
+    "something_went_wrong": "Quelque chose a mal tourne ..."
 }

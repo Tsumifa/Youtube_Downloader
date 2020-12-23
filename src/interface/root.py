@@ -5,6 +5,7 @@
 try:
     #- Librairies
     import tkinter as tk
+    from tkinter import filedialog as _filedialog
 
 except Exception as e:
     raise e
@@ -14,7 +15,7 @@ except Exception as e:
 
 class Root:
 
-    def __init__(self, _settings, _languages, _themes, _menu, _label, _entry, _labelframe, _listbox, _button, _options_window):
+    def __init__(self, _settings, _languages, _themes, _menu, _label, _entry, _labelframe, _listbox, _button, _options_window, _alert, _downloader):
         '''
             initialisation des objets herites de <main>
         '''
@@ -30,9 +31,14 @@ class Root:
         self.entry = _entry
         self.listbox = _listbox
         self.button = _button
+        self.alert = _alert
 
         #- views
         self.options_window = _options_window
+
+        #- Backend
+        self.folder_path = 'C:/Users/Thomas/Downloads'
+        self.downloader = _downloader
 
         '''
             creation de la page + affichage
@@ -42,10 +48,28 @@ class Root:
         self.WINDOW.mainloop()
 
     def check_inputs(self):
-        pass
+        '''
+            verifie si les champs d'entree sont correctement remplis
+        '''
+        if self.URL_ENTRY.get() == '':
+            self.URL_ALERT = self.alert.create_classic_alert('url_unfilled')
+            return 1
+
 
     def dowload_video(self):
-        print("Les infos :\r-url : {}\n-nom : {}\n-format : {}".format(self.URL_ENTRY.get(), self.NAME_ENTRY.get(), self.LISTBOX.get()))
+        
+        if self.check_inputs() != 1:
+            
+            if self.downloader.download(self.URL_ENTRY.get(), self.LISTBOX.get(), self.NAME_ENTRY.get(), self.folder_path) == 1:
+                self.ALERT_DOWNLOAD = self.alert.create_classic_alert('something_went_wrong')
+        
+        else:
+            self.ALERT_DOWNLOAD = self.alert.create_classic_alert('something_went_wrong')
+
+    def browse_forlder(self):
+        self.folder_path = _filedialog.askdirectory()
+        self.LABEL_PATH = self.label.create_path_label(self.SETTING_CONTAINER, self.folder_path)
+        self.LABEL_PATH.grid(pady=10, row=2, columnspan=2)
 
     def initialize_window(self):
         '''
@@ -94,13 +118,13 @@ class Root:
         self.LISTBOX = self.listbox.create_content(self.SETTING_CONTAINER, self.setting.get_settings_data('extensions'))
         self.LISTBOX.grid(pady=10, padx=20, row=0, column=0)
         self.BROWSE_BUTTON = self.button.create_browse_button(self.SETTING_CONTAINER, 'select_folder')
+        self.BROWSE_BUTTON.configure(command=self.browse_forlder)
         self.BROWSE_BUTTON.grid(pady=10, row=0, column=1)
         self.LISTBOX.bind("<<ComboboxSelected>>", self.dowload_video)
         self.NAME_PLACEHOLDER = self.label.create_placeholder(self.SETTING_CONTAINER, 'name')
         self.NAME_PLACEHOLDER.grid(pady=10, row=1, column=0)
         self.NAME_ENTRY = self.entry.create_content(self.SETTING_CONTAINER, 'name')
         self.NAME_ENTRY.grid(pady=10, row=1, column=1)
-        # self.LlisteCombo.bind("<<ComboboxSelected>>", action) faire fonction ici
         self.SUBMIT_BUTTON = self.button.create_submit_button(self.WINDOW, 'download')
         self.SUBMIT_BUTTON.configure(command=self.dowload_video)
-        self.SUBMIT_BUTTON.pack(side='bottom', pady=45)
+        self.SUBMIT_BUTTON.pack(side='bottom', pady=25)

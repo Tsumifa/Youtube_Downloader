@@ -20,5 +20,8 @@
     "apply": "Apply",
     "warning": "Warning",
     "restart": "You need to restart the application !",
-    "creator": "Application made by @TSUMIFA"
+    "creator": "Application made by @TSUMIFA",
+    "file_stored": "Files selected storage location is :",
+    "url_unfilled": "Any link to the video was given !",
+    "something_went_wrong": "Something went wrong ..."
 }
