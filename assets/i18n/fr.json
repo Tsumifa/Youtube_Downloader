@@ -23,5 +23,10 @@
     "creator": "Application developpee par @TSUMIFA",
     "file_stored": "Le fichier sera stocke ici :",
     "url_unfilled": "Aucun lien vers la video n'a ete fourni !",
-    "something_went_wrong": "Quelque chose a mal tourne ..."
+    "something_went_wrong": "Quelque chose a mal tourne ...",
+    "video_only": "Video uniquement",
+    "video_and_audio": "Video et audio",
+    "video_not_free": "La video ne peut pas etre telechargee ...",
+    "video_downloaded": "Votre video est telechargee",
+    "link": "https://github.com/Tsumifa/Youtube_Downloader/wiki/wiki.fr"
 }

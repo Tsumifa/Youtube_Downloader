@@ -4,6 +4,10 @@
         "video",
         "audio"
     ],
+    "fomats": [
+        "only_video",
+        "video_and_audio"
+    ],
     "icon": "assets/img/icon.ico",
     "language": "en-us",
     "language_list": [

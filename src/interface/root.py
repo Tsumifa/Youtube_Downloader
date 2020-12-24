@@ -59,17 +59,21 @@ class Root:
     def dowload_video(self):
         
         if self.check_inputs() != 1:
-            
-            if self.downloader.download(self.URL_ENTRY.get(), self.LISTBOX.get(), self.NAME_ENTRY.get(), self.folder_path) == 1:
+            print(self.FORMAT_LISTBOX.get())
+            errors = self.downloader.download(self.URL_ENTRY.get(), self.LISTBOX.get(), self.NAME_ENTRY.get(), self.folder_path, self.FORMAT_LISTBOX.get())
+            if errors == 1:
                 self.ALERT_DOWNLOAD = self.alert.create_classic_alert('something_went_wrong')
-        
+            elif errors == 2:
+                self.ALERT_DOWNLOAD = self.alert.create_classic_alert('video_not_free')
+            elif errors == 0:
+                self.ALERT_DOWNLOAD = self.alert.create_classic_alert('video_downloaded')
         else:
             self.ALERT_DOWNLOAD = self.alert.create_classic_alert('something_went_wrong')
 
     def browse_forlder(self):
         self.folder_path = _filedialog.askdirectory()
         self.LABEL_PATH = self.label.create_path_label(self.SETTING_CONTAINER, self.folder_path)
-        self.LABEL_PATH.grid(pady=10, row=2, columnspan=2)
+        self.LABEL_PATH.grid(pady=10, row=2, column=1, columnspan=2)
 
     def initialize_window(self):
         '''
@@ -120,11 +124,13 @@ class Root:
         self.BROWSE_BUTTON = self.button.create_browse_button(self.SETTING_CONTAINER, 'select_folder')
         self.BROWSE_BUTTON.configure(command=self.browse_forlder)
         self.BROWSE_BUTTON.grid(pady=10, row=0, column=1)
+        self.FORMAT_LISTBOX = self.listbox.create_content(self.SETTING_CONTAINER, self.setting.get_settings_data("fomats"))
+        self.FORMAT_LISTBOX.grid(row=0, column=2, pady=10)
         self.LISTBOX.bind("<<ComboboxSelected>>", self.dowload_video)
         self.NAME_PLACEHOLDER = self.label.create_placeholder(self.SETTING_CONTAINER, 'name')
         self.NAME_PLACEHOLDER.grid(pady=10, row=1, column=0)
         self.NAME_ENTRY = self.entry.create_content(self.SETTING_CONTAINER, 'name')
-        self.NAME_ENTRY.grid(pady=10, row=1, column=1)
+        self.NAME_ENTRY.grid(pady=10, row=1, column=1, columnspan=2)
         self.SUBMIT_BUTTON = self.button.create_submit_button(self.WINDOW, 'download')
         self.SUBMIT_BUTTON.configure(command=self.dowload_video)
         self.SUBMIT_BUTTON.pack(side='bottom', pady=25)

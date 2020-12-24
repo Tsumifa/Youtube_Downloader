@@ -23,5 +23,10 @@
     "creator": "Application made by @TSUMIFA",
     "file_stored": "Files selected storage location is :",
     "url_unfilled": "Any link to the video was given !",
-    "something_went_wrong": "Something went wrong ..."
+    "something_went_wrong": "Something went wrong ...",
+    "video_only": "Video only",
+    "video_and_audio": "Video and audio",
+    "video_not_free": "The video can't be downloaded ...",
+    "video_downloaded": "Your video is downloaded",
+    "link": "https://github.com/Tsumifa/Youtube_Downloader/wiki/wiki.en"
 }

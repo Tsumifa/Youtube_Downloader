@@ -14,12 +14,14 @@ except Exception as e:
 
 class Menu:
 
-    def __init__(self, _language, _theme, _options_window, _about_page):
+    def __init__(self, _language, _theme, _options_window, _about_page, _alert):
         '''
             initialisation des objets herites de <root>
         '''
         self.language = _language
         self.theme = _theme
+
+        self.alert = _alert
 
         #- views
         self.options_window = _options_window
@@ -39,6 +41,9 @@ class Menu:
 
     def show_about_page(self):
         self.about_window.initialize_window()
+
+    def show_help_pages(self):
+        self.alert.create_classic_alert('link')
 
     def create_content(self, place):
         self.place = place
@@ -60,7 +65,7 @@ class Menu:
         self.menu_bar.add_cascade(label=self.language.get_text("settings"), menu=self.menu1)
 
         self.menu2.add_command(label=self.language.get_text('about'), command=self.show_about_page)
-        self.menu2.add_command(label=self.language.get_text('documentation'), command=print(''))
+        self.menu2.add_command(label=self.language.get_text('documentation'), command=self.show_help_pages)
         self.menu_bar.add_cascade(label=self.language.get_text('help'), menu=self.menu2)
 
         self.menu3.add_separator()

@@ -61,7 +61,7 @@ class Main:
         self.about_window = _about.About_Window(self.settings, self.language, self.theme, self.label)
 
         #- models - menu
-        self.menu = _menu.Menu(self.language, self.theme, self.option_window, self.about_window)
+        self.menu = _menu.Menu(self.language, self.theme, self.option_window, self.about_window, self.alert)
 
 
         '''
